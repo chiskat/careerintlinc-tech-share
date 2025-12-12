@@ -23,7 +23,6 @@ steps:
       - name: pnpm-cache
         path: /careerintlinc-tech-share/.pnpm-store
     commands:
-      - npm i -g pnpm
       - pnpm i
       - pnpm build
     environment:
