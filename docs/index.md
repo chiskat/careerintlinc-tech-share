@@ -6,5 +6,5 @@ hero:
     - text: 开始
       link: /interactive/animation-modal
     - text: 源码
-      link: https://git.paperplane.cc/jia-niang/careerintlinc-tech-share
+      link: https://git.paperplane.cc/chiskat/careerintlinc-tech-share
 ---

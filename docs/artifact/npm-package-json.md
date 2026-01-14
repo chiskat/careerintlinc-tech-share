@@ -119,11 +119,11 @@ group:
   "keywords": ["keyword1", "keyword2"],
   "homepage": "https://careerintlinc-tech-share.paperplane.cc/",
   "bugs": {
-    "url": "https://git.paperplane.cc/jia-niang/careerintlinc-tech-share/issues"
+    "url": "https://git.paperplane.cc/chiskat/careerintlinc-tech-share/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://git.paperplane.cc/jia-niang/careerintlinc-tech-share"
+    "url": "https://git.paperplane.cc/chiskat/careerintlinc-tech-share"
   },
   "license": "MIT",
   "contributors": ["Frank Pu <1@paperplane.cc> (https://paperplane.cc/)"]

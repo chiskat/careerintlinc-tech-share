@@ -1,9 +1,5 @@
 {
-  "name": "careerintlinc-tech-share",
-  "version": "0.0.1",
   "private": true,
-  "description": "Career Intl. Inc. 2023 FE team share online demo.",
-  "license": "MIT",
   "scripts": {
     "preinstall": "npx only-allow pnpm",
     "build": "dumi build",
@@ -40,9 +36,6 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
   },
-  "authors": [
-    "jia-niang <1@paperplane.cc>"
-  ],
   "pnpm": {
     "onlyBuiltDependencies": [
       "@parcel/watcher",

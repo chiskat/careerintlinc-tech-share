@@ -14,11 +14,11 @@ volumes:
 
 trigger:
   branch:
-    - master
+    - main
 
 steps:
   - name: build
-    image: paperplanecc/baseline-node20:2025.11.30
+    image: chiskat/baseline-node20:2026.1.14
     volumes:
       - name: pnpm-cache
         path: /careerintlinc-tech-share/.pnpm-store
