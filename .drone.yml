@@ -1,9 +1,6 @@
 kind: pipeline
 name: default
 
-workspace:
-  path: /careerintlinc-tech-share
-
 volumes:
   - name: webroot
     host:
@@ -17,16 +14,36 @@ trigger:
     - main
 
 steps:
+  - name: restore-cache
+    image: drillster/drone-volume-cache
+    settings:
+      restore: true
+      mount:
+        - /drone/src/.pnpm-store
+    volumes:
+      - name: pnpm-cache
+        path: /cache
+
   - name: build
     image: chiskat/baseline-node20:2026.1.14
     volumes:
       - name: pnpm-cache
-        path: /careerintlinc-tech-share/.pnpm-store
+        path: /drone/src/.pnpm-store
     commands:
       - pnpm i
       - pnpm build
     environment:
       HUSKY: 0
+
+  - name: rebuild-cache
+    image: drillster/drone-volume-cache
+    settings:
+      rebuild: true
+      mount:
+        - /drone/src/.pnpm-store
+    volumes:
+      - name: pnpm-cache
+        path: /cache
 
   - name: deploy-upload-cdn
     image: plugins/s3
@@ -53,4 +70,3 @@ steps:
     commands:
       - mkdir -p /webroot/careerintlinc-tech-share/
       - cp -rf ./dist/* /webroot/careerintlinc-tech-share/
-
