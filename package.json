@@ -1,7 +1,6 @@
 {
   "private": true,
   "scripts": {
-    "preinstall": "npx only-allow pnpm",
     "build": "dumi build",
     "dev": "dumi dev",
     "prepare": "husky install && dumi setup",
@@ -35,15 +34,5 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
-  },
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "@parcel/watcher",
-      "@swc/core",
-      "aws-sdk",
-      "core-js",
-      "core-js-pure",
-      "esbuild"
-    ]
   }
 }
